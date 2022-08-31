@@ -53,7 +53,13 @@ for partner_uni in lines:
 
                 if info == 0:
                     info = -1
-        
+    
+    i = 0
+    while (i < len(info_list)):
+        info_list[i] = " ".join(info_list[i])
+        info_list[i] = info_list[i].strip()
+        i += 1
+
     print(info_list)
     write.writerow(info_list)
 
